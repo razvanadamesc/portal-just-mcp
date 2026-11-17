@@ -1,0 +1,12 @@
+{
+  // Configurare Cloudflare Workers. "name" trebuie să coincidă cu Project name din dashboard.
+  // Secretul ACCESS_TOKEN NU se pune aici: Settings → Variables and Secrets (Runtime) → Secret.
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "portal-just-mcp",
+  "main": "worker.js",
+  "compatibility_date": "2025-09-01",
+  "workers_dev": true,
+  "preview_urls": false,
+  // portalquery.just.ro răspunde de oriunde; regiunea UE e doar pentru latență și consecvență cu legislatie-ro-mcp.
+  "placement": { "region": "aws:eu-central-1" }
+}
